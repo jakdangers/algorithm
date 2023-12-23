@@ -1,6 +1,5 @@
 from collections import defaultdict
 
-
 class Solution:
     def uniqueMorseRepresentations(self, words: List[str]) -> int:
 
