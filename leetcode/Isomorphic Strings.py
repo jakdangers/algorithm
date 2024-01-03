@@ -1,6 +1,4 @@
 from collections import defaultdict
-
-
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
 
