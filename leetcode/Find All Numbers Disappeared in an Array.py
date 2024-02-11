@@ -1,17 +1,14 @@
 class Solution:
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
 
-        n = len(nums)
-        dic = {}
-
         for num in nums:
-            if num not in dic:
-                dic[num] = True
+            positive = abs(num)
+            if nums[positive - 1] > 0:
+                nums[positive - 1] = -1 * nums[positive - 1]
 
         result = []
-        for n in range(1, n + 1):
-
-            if n not in dic:
-                result.append(n)
+        for idx in range(len(nums)):
+            if nums[idx] > 0:
+                result.append(idx + 1)
 
         return result
